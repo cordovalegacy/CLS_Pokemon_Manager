@@ -1,4 +1,3 @@
-import Berry from '../img/berry.png'
 
 const DisplayAll = () => {
 

@@ -1,4 +1,4 @@
-import image from '../img/pokeball.png'
+import pokeBall from '../img/pokeball.png'
 
 const CreateOne = () => {
 

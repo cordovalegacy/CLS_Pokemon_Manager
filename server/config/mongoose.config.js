@@ -1,4 +1,4 @@
-const Mongoose = require('mongoose')
+const mongoose = require('mongoose')
 
 const db = 'CLS_Pokemon_DB'
 

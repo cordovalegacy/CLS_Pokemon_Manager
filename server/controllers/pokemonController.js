@@ -33,10 +33,25 @@ module.exports = {
             })
     },
 
-    //START HERE TUESDAY
+    updatePokemon: (req, res) => {
+        Pokemon.findOneAndUpdate({_id:req.params.id}, req.body, {new:true, runValidators:true})
+            .then((updatedPokemon) => {
+                res.status(201).json(updatedPokemon)
+            })
+            .catch((err) => {
+                res.status(400).json(err)
+            })
+    },
 
+    deletePokemon: (req, res) => {
+        Pokemon.deleteOne({_id: req.params.id})
+            .then(() => {
+                res.status(204).send()
+                console.log("Success! You deleted a pokemon")
+            })
+            .catch((err) => {
+                res.status(400).json(err)
+            })
 
-
-
-
+    }
 }

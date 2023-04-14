@@ -11,14 +11,14 @@ function App() {
     <BrowserRouter>
     <div className="App">
       <nav>
-        <Link to={''}><img src={PokeBall} alt='Logo'/></Link>
+        <Link to={'/'}><img src={PokeBall} id='pokeball' alt='Logo'/></Link>
         <h1>Welcome to the PokeCenter</h1>
-        <Link to={''}>Pokedex</Link>
+        <Link to={'/pokedex'}>Pokedex</Link>
       </nav>
       <Routes>
         <Route path='/pokedex' element={<CreateOne />}/>
         <Route path='/' element={<DisplayAll />}/>
-        <Route path='/displayOne' element={<DisplayOne />}/>
+        <Route path='/displayOne/:id' element={<DisplayOne />}/>
         <Route path='/editOne' element={<EditOne />}/>
       </Routes>
     </div>

@@ -1108,7 +1108,7 @@ nav a:hover {
 
 }
 
-@media handheld and (orientation:portrait),
+/* @media handheld and (orientation:portrait),
 (max-width:768px) {
 
   div#pokedex {
@@ -1185,8 +1185,8 @@ nav a:hover {
   div#barbutton2,
   div#cross {
     display: none;
-  }
+  } */
 
   /* POKEDEX SECTION */
 
-}
+/* } */

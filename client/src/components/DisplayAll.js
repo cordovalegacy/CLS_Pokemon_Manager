@@ -42,7 +42,7 @@ const DisplayAll = () => {
                             <Link to={`/displayOne/${onePokemon._id}`}><img src={onePokemon.image} alt={onePokemon.name} /></Link>
                             <p>{onePokemon.type}</p>
                             <div className='card-buttons'>
-                                <button className='green-btn'>Edit</button>
+                                <button className='green-btn' onClick={() => navigate(`/editOne/${onePokemon._id}`)}>Edit</button>
                                 <button className='red-btn' onClick={() => deleteHandler(onePokemon._id)}>Delete</button>
                             </div>
                         </div>

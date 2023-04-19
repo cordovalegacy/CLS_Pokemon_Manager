@@ -19,7 +19,7 @@ function App() {
         <Route path='/pokedex' element={<CreateOne />}/>
         <Route path='/' element={<DisplayAll />}/>
         <Route path='/displayOne/:id' element={<DisplayOne />}/>
-        <Route path='/editOne' element={<EditOne />}/>
+        <Route path='/editOne/:id' element={<EditOne />}/>
       </Routes>
     </div>
     </BrowserRouter>

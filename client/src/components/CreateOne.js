@@ -1,6 +1,7 @@
 import PokeBall from '../img/pokeball.png'
 import { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const CreateOne = () => {
 
@@ -19,6 +20,8 @@ const CreateOne = () => {
         searchErrors: "",
         postErrors: ""
     })
+
+    const navigate = useNavigate()
 
     const changeHandler = (e) => {
         setPokeList({ ...pokeList, [e.target.name]: e.target.value })
@@ -49,9 +52,10 @@ const CreateOne = () => {
             .then((res) => {
                 console.log("Success! You add a pokemon to your party", res.data)
                 setErrors({}) //<= added this line because I want to reset my errors upon successful post
+                navigate('/')
             })
             .catch((err) => {
-                console.log("Something went wrong: ", err)
+                console.log("Something went wrong (CreateOne.js): ", err)
                 setErrors({ ...errors, postErrors: err.response.data.errors.nickname.message })
             })
 
